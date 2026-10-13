@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strength Calculators | Strongman Gym Nairobi</title>
+<meta name="description" content="Free one-rep max calculator, barbell plate calculator, BMI and calorie calculators from Strongman Gym.">
+<meta name="theme-color" content="#0d0d0f">
+<meta property="og:title" content="Strength Calculators | Strongman Gym Nairobi">
+<meta property="og:description" content="Free one-rep max calculator, barbell plate calculator, BMI and calorie calculators from Strongman Gym.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><div class="container">
+  <span>Mon–Fri 5am–10pm · Sat 6am–8pm · Sun 7am–2pm</span>
+  <span><a data-cfg="phone" href="#">+254 712 345 678</a> · <a data-cfg="email" href="#">info@strongmangym.co.ke</a></span>
+</div></div>
+<header class="header">
+  <nav class="container nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Strongman Gym home"><svg viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,2 44,13 44,35 24,46 4,35 4,13" fill="#f5b301"/><rect x="9" y="22" width="30" height="4" fill="#111"/><rect x="12" y="15" width="5" height="18" rx="1" fill="#111"/><rect x="31" y="15" width="5" height="18" rx="1" fill="#111"/><rect x="8" y="18" width="3" height="12" rx="1" fill="#111"/><rect x="37" y="18" width="3" height="12" rx="1" fill="#111"/></svg><span>Strongman <b>Gym</b></span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="membership.html">Membership</a></li><li><a href="coaches.html">Coaches</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="tools.html">Tools</a></li>
+      <li><a class="btn" href="contact.html#join">Free Trial</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Tools</div>
+  <h1>Strength Tools</h1>
+  <p>Free calculators our coaches use every day. Plan your training like a pro.</p>
+</div></section>
+<section class="section"><div class="container"><div class="grid grid-2">
+  <div class="tool reveal">
+    <h3><svg style="width:28px;vertical-align:middle;color:#f5b301" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/><rect x="4.5" y="7" width="4" height="10" rx="1" fill="none"/><rect x="15.5" y="7" width="4" height="10" rx="1"/></svg> One-Rep Max</h3>
+    <p class="muted">Estimate your 1RM from any set of 1–12 reps, plus your training percentages.</p>
+    <form id="rm-form"><div class="form-row">
+      <div class="field"><label for="rm-weight">Weight lifted (kg)</label><input id="rm-weight" type="number" min="1" step="0.5" placeholder="e.g. 100"></div>
+      <div class="field"><label for="rm-reps">Reps completed</label><input id="rm-reps" type="number" min="1" max="12" placeholder="e.g. 5"></div>
+    </div><button class="btn" type="submit">Calculate</button></form>
+    <div class="result" id="rm-result" aria-live="polite"><span class="muted">Your result appears here.</span></div>
+  </div>
+  <div class="tool reveal">
+    <h3><svg style="width:28px;vertical-align:middle;color:#f5b301" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="9" width="18" height="6" rx="3"/><path d="M9 11v2M15 11v2M1 12h2M21 12h2"/></svg> Plate Calculator</h3>
+    <p class="muted">Which plates go on each side of the bar? (Competition kg plates.)</p>
+    <form id="plate-form"><div class="form-row">
+      <div class="field"><label for="plate-target">Target weight (kg)</label><input id="plate-target" type="number" min="0" step="2.5" placeholder="e.g. 142.5"></div>
+      <div class="field"><label for="plate-bar">Bar</label><select id="plate-bar"><option value="20">Men's bar — 20 kg</option><option value="15">Women's bar — 15 kg</option><option value="25">Squat bar — 25 kg</option><option value="10">Technique bar — 10 kg</option></select></div>
+    </div><button class="btn" type="submit">Load The Bar</button></form>
+    <div class="result" id="plate-result" aria-live="polite"><span class="muted">Your result appears here.</span></div>
+  </div>
+  <div class="tool reveal">
+    <h3><svg style="width:28px;vertical-align:middle;color:#f5b301" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/><path d="M3 12h4l2-3 3 6 2-3h7"/></svg> BMI Calculator</h3>
+    <p class="muted">A quick screening number. Not the whole story for lifters.</p>
+    <form id="bmi-form"><div class="form-row">
+      <div class="field"><label for="bmi-weight">Weight (kg)</label><input id="bmi-weight" type="number" min="1" step="0.1" placeholder="e.g. 82"></div>
+      <div class="field"><label for="bmi-height">Height (cm)</label><input id="bmi-height" type="number" min="50" placeholder="e.g. 178"></div>
+    </div><button class="btn" type="submit">Calculate BMI</button></form>
+    <div class="result" id="bmi-result" aria-live="polite"><span class="muted">Your result appears here.</span></div>
+  </div>
+  <div class="tool reveal">
+    <h3><svg style="width:28px;vertical-align:middle;color:#f5b301" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 7c-2-2-7-2-8 3s2 11 5 11c1.2 0 2-.6 3-.6s1.8.6 3 .6c3 0 6-6 5-11s-6-5-8-3z"/><path d="M12 7c0-2 1-4 3-5"/></svg> Calorie &amp; Protein</h3>
+    <p class="muted">Daily calorie needs (Mifflin-St Jeor) and protein target.</p>
+    <form id="tdee-form"><div class="form-row">
+      <div class="field"><label for="tdee-sex">Sex</label><select id="tdee-sex"><option value="male">Male</option><option value="female">Female</option></select></div>
+      <div class="field"><label for="tdee-age">Age</label><input id="tdee-age" type="number" min="12" max="100" placeholder="e.g. 30"></div>
+    </div><div class="form-row">
+      <div class="field"><label for="tdee-weight">Weight (kg)</label><input id="tdee-weight" type="number" min="1" step="0.1" placeholder="e.g. 82"></div>
+      <div class="field"><label for="tdee-height">Height (cm)</label><input id="tdee-height" type="number" min="50" placeholder="e.g. 178"></div>
+    </div>
+    <div class="field"><label for="tdee-activity">Activity level</label><select id="tdee-activity">
+      <option value="1.375">Light — training 1–3 days/week</option><option value="1.55" selected>Moderate — training 3–5 days/week</option>
+      <option value="1.725">Hard — training 6–7 days/week</option><option value="1.9">Athlete — twice a day / physical job</option></select></div>
+    <button class="btn" type="submit">Calculate</button></form>
+    <div class="result" id="tdee-result" aria-live="polite"><span class="muted">Your result appears here.</span></div>
+  </div>
+</div>
+<p class="center muted" style="margin-top:30px">These calculators give estimates only. For a personalised plan, book a session with one of our coaches.</p>
+</div></section>
+<section class="cta-band"><div class="container">
+  <div><h2>Your first session is on us</h2><p>Book a free trial and train with a coach — no contract, no pressure.</p></div>
+  <a class="btn" href="contact.html#join">Claim Free Trial →</a>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,2 44,13 44,35 24,46 4,35 4,13" fill="#f5b301"/><rect x="9" y="22" width="30" height="4" fill="#111"/><rect x="12" y="15" width="5" height="18" rx="1" fill="#111"/><rect x="31" y="15" width="5" height="18" rx="1" fill="#111"/><rect x="8" y="18" width="3" height="12" rx="1" fill="#111"/><rect x="37" y="18" width="3" height="12" rx="1" fill="#111"/></svg><span>Strongman <b>Gym</b></span></a>
+      <p style="margin-top:16px">Nairobi's home of strongman, powerlifting and serious strength training. Every level welcome — from first deadlift to national podium.</p>
+      <div class="socials"><a data-cfg="social.instagram" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a><a data-cfg="social.facebook" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-1 .5-1.5 1.5-1.5H17V1h-3c-3 0-4 2-4 4.5V8H7v3.5h3V23h4V11.5h3l.5-3.5z"/></svg></a><a data-cfg="social.tiktok" href="#" aria-label="Tiktok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3.3v13.4a2.9 2.9 0 1 1-2.1-2.8V9.2a6.2 6.2 0 1 0 5.4 6.2V8.6a7.6 7.6 0 0 0 4.5 1.4V6.7a4.5 4.5 0 0 1-4.5-4.7z"/></svg></a><a data-cfg="social.youtube" href="#" aria-label="Youtube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg></a></div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="membership.html">Membership</a></li><li><a href="coaches.html">Coaches</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="tools.html">Tools</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li data-cfg="address">Ngong Road, Nairobi</li>
+        <li><a data-cfg="phone" href="#">+254 712 345 678</a></li>
+        <li><a data-cfg="email" href="#">info@strongmangym.co.ke</a></li>
+        <li><span class="open-now" data-open-status>Open now</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Strength Notes</h4>
+      <p>Weekly programming tips, meet announcements and member offers.</p>
+      <form class="newsletter" novalidate><label class="skip" for="nl-tools">Email</label><input id="nl-tools" type="email" placeholder="Your email" required><button class="btn small" type="submit">Join</button></form>
+      <div class="msg" role="status"></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span class="year">2026</span> Strongman Gym. All rights reserved.</span>
+    <span>M-Pesa Paybill <b class="yellow" data-cfg="mpesaPaybill">522522</b> · <a href="membership.html#faq">Terms &amp; FAQ</a></span>
+  </div>
+</footer>
+<a class="whatsapp" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0z"/></svg></a>
+<button class="to-top" aria-label="Back to top">↑</button>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
